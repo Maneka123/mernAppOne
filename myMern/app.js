@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const User = require("./db/userModel");
 
 const auth = require("./auth");
-
+const cors = require('cors');
 
 
 
@@ -16,6 +16,7 @@ const express = require('express');
 const dbConnect = require('./config/db');
 
 const app = express();
+app.use(cors());
 // Middleware to parse JSON bodies
 app.use(express.json());
 // Connect Database
